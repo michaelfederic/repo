@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of 10 objects</title>
+</head>
+<body>
+    
+    <script>
+        /*array of objects
+        const list = [
+            {"Honda":"url(/VScode/javascript/JoshAssignments/Ex1/cars/pic1.jpeg)"},
+            {"Nissan":"url(/VScode/javascript/JoshAssignments/Ex1/cars/pic2.jpeg)"},
+            {"Ford":"url(/VScode/javascript/JoshAssignments/Ex1/cars/pic3.jpeg)"},
+            {"Volvo":"url(/VScode/javascript/JoshAssignments/Ex1/cars/pic4.jpeg)"},
+            {"Chevrolet":"url(/VScode/javascript/JoshAssignments/Ex1/cars/pic5.jpeg)"},
+            {"Toyota":"url(/VScode/javascript/JoshAssignments/Ex1/cars/pic6.jpeg)"},
+            {"Kia":"url(/VScode/javascript/JoshAssignments/Ex1/cars/pic7.jpeg)"},
+            {"Jeep":"url(/VScode/javascript/JoshAssignments/Ex1/cars/pic8.jpeg)"},
+            {"Dodge":"url(/VScode/javascript/JoshAssignments/Ex1/cars/pic9.jpeg)"},
+            {"Mazda":"url(/VScode/javascript/JoshAssignments/Ex1/cars/pic10.jpeg)"}]
+            */
+        //list of objects
+        const list1 = {
+            Honda: "/VScode/javascript/JoshAssignments/Ex1/cars/pic1.jpeg",
+            Nissan: "/VScode/javascript/JoshAssignments/Ex1/cars/pic2.jpeg",
+            Ford: "/VScode/javascript/JoshAssignments/Ex1/cars/pic3.jpeg",
+            Volvo: "/VScode/javascript/JoshAssignments/Ex1/cars/pic4.jpeg",
+            Chevrolet: "/VScode/javascript/JoshAssignments/Ex1/cars/pic5.jpeg",
+            Toyota: "/VScode/javascript/JoshAssignments/Ex1/cars/pic6.jpeg",
+            Kia: "/VScode/javascript/JoshAssignments/Ex1/cars/pic7.jpeg",
+            Jeep: "/VScode/javascript/JoshAssignments/Ex1/cars/pic8.jpeg",
+            Dodge: "/VScode/javascript/JoshAssignments/Ex1/cars/pic9.jpeg",
+            Mazda: "/VScode/javascript/JoshAssignments/Ex1/cars/pic10.jpeg"
+        };
+        const ul = document.createElement("ul");
+        const cars = Object.keys(list1);
+        const carImages = Object.values(list1);
+
+        for (let i = 0; i < 10; i++) {
+            const listElement = document.createElement("list");
+            const imageElement = document.createElement("img");
+            listElement.textContent = `${cars[i]}`;
+            listElement.style.fontWeight = "900";
+            listElement.style.fontSize = "30px";
+            imageElement.setAttribute("src", `${carImages[i]}`);
+            imageElement.style.display = "Block";
+            listElement.appendChild(imageElement);
+            imageElement.style.width = "300px";
+            imageElement.style.height = "200px";
+            ul.appendChild(listElement);
+        }
+
+document.body.appendChild(ul);
+
+    </script>
+</body>
+</html>
